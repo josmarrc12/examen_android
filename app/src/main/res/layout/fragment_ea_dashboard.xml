@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dashboard.EADashboardFragment">
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/gl_middle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent=".5" />
+
+    <TextView
+        android:id="@+id/lbl_welcome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/ea_welcome"
+      style="@style/title_style"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginTop="@dimen/ea_margin_padding_size_xxlarge"
+      android:textColor="@color/ea_blue" />
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cv_popular"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+    android:background="@color/ea_background_card_blue"
+    app:cardCornerRadius="@dimen/ea_corner_radius"
+    app:cardElevation="@dimen/ea_card_elevation"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/gl_middle"
+    app:layout_constraintTop_toBottomOf="@id/lbl_welcome"
+    android:layout_marginStart="@dimen/ea_margin_padding_size_medium"
+    android:layout_marginEnd="@dimen/ea_margin_padding_size_small"
+    android:layout_marginTop="@dimen/ea_margin_padding_size_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+      <TextView
+          android:id="@+id/lbl_popular"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ea_popular"
+          style="@style/subtitle_style"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_margin="@dimen/ea_margin_padding_size_xlarge"
+          android:textColor="@color/ea_blue" />
+
+      <ImageView
+          android:id="@+id/iv_popular"
+          android:layout_width="@dimen/item_image"
+          android:layout_height="@dimen/item_image"
+        android:src="@drawable/ea_popular_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_popular" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cv_top_rated"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/ea_background_card_blue"
+      app:cardCornerRadius="@dimen/ea_corner_radius"
+      app:cardElevation="@dimen/ea_card_elevation"
+     app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/gl_middle"
+      app:layout_constraintTop_toBottomOf="@id/lbl_welcome"
+      android:layout_marginStart="@dimen/ea_margin_padding_size_medium"
+      android:layout_marginEnd="@dimen/ea_margin_padding_size_small"
+      android:layout_marginTop="@dimen/ea_margin_padding_size_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+      <TextView
+          android:id="@+id/lbl_top_rated"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ea_top_rated"
+          style="@style/subtitle_style"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_margin="@dimen/ea_margin_padding_size_xlarge"
+          android:textColor="@color/ea_blue" />
+
+      <ImageView
+          android:id="@+id/iv_top_rated"
+          android:layout_width="@dimen/item_image"
+          android:layout_height="@dimen/item_image"
+          android:src="@drawable/ea_start_image"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/lbl_top_rated" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cv_up_coming"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/ea_background_card_blue"
+      app:cardCornerRadius="@dimen/ea_corner_radius"
+      app:cardElevation="@dimen/ea_card_elevation"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/cv_popular"
+      android:layout_marginStart="@dimen/ea_margin_padding_size_medium"
+      android:layout_marginEnd="@dimen/ea_margin_padding_size_small"
+      android:layout_marginTop="@dimen/ea_margin_padding_size_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+      <TextView
+          android:id="@+id/lbl_up_coming"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ea_upcoming"
+          style="@style/subtitle_style"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toStartOf="@id/iv_up_coming"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:layout_margin="@dimen/ea_margin_padding_size_xxlarge"
+          android:textColor="@color/ea_blue" />
+
+      <ImageView
+          android:id="@+id/iv_up_coming"
+          android:layout_width="@dimen/item_image"
+          android:layout_height="@dimen/item_image"
+          android:src="@drawable/ea_time_image"
+          app:layout_constraintStart_toEndOf="@id/lbl_up_coming"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:layout_margin="@dimen/ea_margin_padding_size_small"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cv_map"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/ea_background_card_blue"
+      app:cardCornerRadius="@dimen/ea_corner_radius"
+      app:cardElevation="@dimen/ea_card_elevation"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/gl_middle"
+      app:layout_constraintTop_toBottomOf="@id/cv_up_coming"
+      android:layout_marginStart="@dimen/ea_margin_padding_size_medium"
+      android:layout_marginEnd="@dimen/ea_margin_padding_size_small"
+      android:layout_marginTop="@dimen/ea_margin_padding_size_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+      <TextView
+          android:id="@+id/lbl_location"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ea_location"
+          style="@style/subtitle_style"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_margin="@dimen/ea_margin_padding_size_xlarge"
+          android:textColor="@color/ea_blue" />
+
+      <ImageView
+          android:id="@+id/iv_location"
+          android:layout_width="@dimen/item_image"
+          android:layout_height="@dimen/item_image"
+          android:src="@drawable/ea_ic_map"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/lbl_location" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cv_image"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/ea_background_card_blue"
+      app:cardCornerRadius="@dimen/ea_corner_radius"
+      app:cardElevation="@dimen/ea_card_elevation"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/gl_middle"
+      app:layout_constraintTop_toBottomOf="@id/cv_up_coming"
+      android:layout_marginStart="@dimen/ea_margin_padding_size_medium"
+      android:layout_marginEnd="@dimen/ea_margin_padding_size_small"
+      android:layout_marginTop="@dimen/ea_margin_padding_size_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+      <TextView
+          android:id="@+id/lbl_image"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ea_upload_pictures"
+          style="@style/subtitle_style"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_margin="@dimen/ea_margin_padding_size_xlarge"
+          android:textColor="@color/ea_blue" />
+
+      <ImageView
+          android:id="@+id/iv_image"
+          android:layout_width="@dimen/item_image"
+          android:layout_height="@dimen/item_image"
+          android:src="@drawable/ea_ic_image"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/lbl_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

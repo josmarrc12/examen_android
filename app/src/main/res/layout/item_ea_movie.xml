@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cv_movie"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ea_margin_padding_size_small"
+    android:background="@color/ea_background_card_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_movie"
+            android:layout_width="@dimen/item_image"
+            android:layout_height="@dimen/item_image"
+            android:adjustViewBounds="true"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/ea_margin_padding_size_mini"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_movie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/ea_txt_title"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/ea_margin_padding_size_small"
+            android:layout_marginTop="@dimen/ea_margin_padding_size_small"
+            tools:text="Titulo" />
+
+        <TextView
+            android:id="@+id/lbl_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_movie"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:textSize="@dimen/ea_txt_subtitle"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/ea_margin_padding_size_small"
+            android:layout_marginTop="@dimen/ea_margin_padding_size_small"
+           android:text="@string/ea_date" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/lbl_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:textSize="@dimen/ea_txt_subtitle"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/ea_margin_padding_size_small"
+            android:layout_marginTop="@dimen/ea_margin_padding_size_small"
+            tools:text="2022-09-20" />
+
+        <TextView
+            android:id="@+id/lbl_rated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_movie"
+            app:layout_constraintTop_toBottomOf="@id/tv_date"
+            android:textSize="@dimen/ea_txt_subtitle"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/ea_margin_padding_size_small"
+            android:layout_marginTop="@dimen/ea_margin_padding_size_small"
+            android:text="@string/ea_rated" />
+
+        <TextView
+            android:id="@+id/tv_rated"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/lbl_rated"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_date"
+            android:textSize="@dimen/ea_txt_subtitle"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/ea_margin_padding_size_small"
+            android:layout_marginTop="@dimen/ea_margin_padding_size_small"
+            tools:text="9.7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

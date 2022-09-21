@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ea_nav_graph_movies"
+    app:startDestination="@id/EADashboardFragment">
+
+    <fragment
+        android:id="@+id/EADashboardFragment"
+        android:name="com.osmar.examen_android.ui.dashboard.EADashboardFragment"
+        android:label="fragment_ea_dashboard"
+        tools:layout="@layout/fragment_ea_dashboard" >
+        <action
+            android:id="@+id/action_EADashboardFragment_to_EAPopularMoviesFragment"
+            app:destination="@id/EAPopularMoviesFragment" />
+        <action
+            android:id="@+id/action_EADashboardFragment_to_EAUpComingMoviesFragment"
+            app:destination="@id/EAUpComingMoviesFragment" />
+        <action
+            android:id="@+id/action_EADashboardFragment_to_EATopRatedMoviesFragment"
+            app:destination="@id/EATopRatedMoviesFragment" />
+        <action
+            android:id="@+id/action_EADashboardFragment_to_EALocationFragment"
+            app:destination="@id/EALocationFragment" />
+        <action
+            android:id="@+id/action_EADashboardFragment_to_EAUploadImageFragment"
+            app:destination="@id/EAUploadImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/EAPopularMoviesFragment"
+        android:name="com.osmar.examen_android.ui.movies.popular.EAPopularMoviesFragment"
+        android:label="fragment_ea_popular_movies"
+        tools:layout="@layout/fragment_ea_popular_movies" >
+        <action
+            android:id="@+id/action_EAPopularMoviesFragment_to_EADetailMovieFragment"
+            app:destination="@id/EADetailMovieFragment" >
+            <argument
+                android:name="movieId"
+                app:argType="long"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/EATopRatedMoviesFragment"
+        android:name="com.osmar.examen_android.ui.movies.toprated.EATopRatedMoviesFragment"
+        android:label="fragment_ea_top_rated_movies"
+        tools:layout="@layout/fragment_ea_top_rated_movies" >
+        <action
+            android:id="@+id/action_EATopRatedMoviesFragment_to_EADetailMovieFragment"
+            app:destination="@id/EADetailMovieFragment" >
+            <argument
+            android:name="movieId"
+            app:argType="long"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/EAUpComingMoviesFragment"
+        android:name="com.osmar.examen_android.ui.movies.upcoming.EAUpComingMoviesFragment"
+        android:label="fragment_ea_up_coming_movies"
+        tools:layout="@layout/fragment_ea_up_coming_movies" >
+        <action
+            android:id="@+id/action_EAUpComingMoviesFragment_to_EADetailMovieFragment"
+            app:destination="@id/EADetailMovieFragment" >
+            <argument
+                android:name="movieId"
+                app:argType="long"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/EADetailMovieFragment"
+        android:name="com.osmar.examen_android.ui.movies.detail.EADetailMovieFragment"
+        android:label="fragment_ea_detail_movie"
+        tools:layout="@layout/fragment_ea_detail_movie" >
+        <argument
+            android:name="movieId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/EALocationFragment"
+        android:name="com.osmar.examen_android.ui.location.EALocationFragment"
+        android:label="fragment_ea_location"
+        tools:layout="@layout/fragment_ea_location" />
+    <fragment
+        android:id="@+id/EAUploadImageFragment"
+        android:name="com.osmar.examen_android.ui.image.EAUploadImageFragment"
+        android:label="fragment_ea_upload_image"
+        tools:layout="@layout/fragment_ea_upload_image" />
+</navigation>
